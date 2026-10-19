@@ -1,0 +1,10 @@
+{
+  "name": "markdown-snap",
+  "description": "Turn markdown into beautiful CodeSnap-style PNG or JPEG images. Offline, no browser, only Node.js.",
+  "version": "0.1.0",
+  "author": { "name": "Safwan Mamji" },
+  "homepage": "https://github.com/safwanidrees/markdown-snap-skill",
+  "repository": "https://github.com/safwanidrees/markdown-snap-skill",
+  "license": "MIT",
+  "keywords": ["markdown", "screenshot", "image", "codesnap", "png"]
+}

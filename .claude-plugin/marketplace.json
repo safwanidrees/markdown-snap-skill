@@ -1,0 +1,14 @@
+{
+  "name": "markdown-snap",
+  "description": "Markdown Snap: turn markdown into CodeSnap-style images from Claude Code.",
+  "owner": {
+    "name": "Safwan Mamji"
+  },
+  "plugins": [
+    {
+      "name": "markdown-snap",
+      "source": "./plugins/markdown-snap",
+      "description": "Turn markdown into beautiful CodeSnap-style PNG or JPEG images. Offline, no browser, only Node.js."
+    }
+  ]
+}

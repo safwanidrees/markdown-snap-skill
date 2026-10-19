@@ -1,0 +1,12 @@
+# Built output: hide from diffs and language stats.
+plugins/markdown-snap/skills/snap/scripts/snap.mjs linguist-generated=true -diff
+plugins/markdown-snap/skills/snap/THIRD_PARTY_LICENSES.txt linguist-generated=true
+
+# Binary assets.
+*.wasm binary
+*.woff binary
+*.png binary
+*.jpg binary
+
+# Keep the same line endings everywhere so the bundle check is stable.
+* text=auto eol=lf
