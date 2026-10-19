@@ -61,10 +61,11 @@ export function loadFonts(assetsDir, emoji) {
 
   const inFonts = (ch) => faces.some((f) => f.font.charToGlyphIndex(ch) > 0)
 
-  // Symbols such as © or ↔ count as emoji in Unicode but the fonts have them,
-  // so they're drawn as text unless written with the emoji selector (FE0F) or
-  // as a sequence.
-  const drawnAsEmoji = (g) => emoji.has(g) && ([...g].length > 1 || !inFonts(g))
+  // Characters Unicode shows as emoji by default (⏳ ✅ 🚀) are always emoji.
+  // Text-style symbols such as © or ↔ stay text when a font has them, unless
+  // written with the emoji selector (FE0F) or as part of a sequence.
+  const drawnAsEmoji = (g) =>
+    emoji.has(g) && (/\p{Emoji_Presentation}/u.test(g) || [...g].length > 1 || !inFonts(g))
 
   /** Width in px of `text` set in the given face, with glyph fallback. */
   function measure(text, { mono = false, weight = 400, italic = false, size }) {

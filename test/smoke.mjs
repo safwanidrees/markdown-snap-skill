@@ -47,6 +47,7 @@ const snapText = (md) =>
 for (const [name, md, expectWarning] of [
   ['emoji, flags, skin tones, ZWJ and keycaps', 'Done ✅ 🚀 👋🏽 🇵🇰 👨‍👩‍👧 ❤️ 1️⃣\n\n| ✅ | 🎉 |\n|---|---|\n| `✅` | ok |', false],
   ['arrows and symbols', 'a → b ↔ c ≈ ≠ ≤ ≥ ★ ✓ ✔ ✗ © ™', false],
+  ['emoji the symbol fonts also contain (⏳ ⌛ ⌚)', '⏳ Started ⌛ ⌚', false],
   ['right-to-left text warns', 'سلام', true],
 ]) {
   const warned = /can't be drawn correctly/.test(snapText(md))
